@@ -61,7 +61,7 @@ X浏览器和VIA浏览器自带插件，无需安装。
    
 脚本**完整版**安装/更新地址: 
 
-<a href="https://github.com/Zheng8907/silver-waffle/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.0 版本-005200" height=35px /></a>
+<a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.0 版本-005200" height=35px /></a>
 
 
 ## 使用
