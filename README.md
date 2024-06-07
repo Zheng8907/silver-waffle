@@ -1,4 +1,4 @@
-[![platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Android%20%7C%20IOS-red.svg)](https://github.com/Zheng8907/silver-waffle/main/CK.user.js) [![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll) [![Install](https://img.shields.io/badge/安装-005200)](https://github.com/Zheng8907/silver-waffle/main/CK.user.js)
+[![platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Android%20%7C%20IOS-red.svg)](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js) [![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll) [![Install](https://img.shields.io/badge/安装-005200)](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)
 
 
 全网VIP视频会员
@@ -171,10 +171,10 @@ X浏览器和VIA浏览器自带插件，无需安装。
 * 点击浏览器右上角的Tampermonkey插件图标，在管理面板里关闭其他脚本，按F5刷新网页试试。
 * 如果是360安全浏览器要切换到极速模式，另外不建议使用国产浏览器。
 * 点击浏览器右上角的Tampermonkey插件图标，打开脚本的设置，查看图标设置是否正常，根据需要调整图标的位置并保存。
-* 以上都没有解决，可以在浏览器右上角点击Tampermonkey，进入“管理面板”，在右上角“已安装脚本”页面删除所有脚本，进入右上角“设置”和“实用工具”中间的“回收站”，删除所有脚本，再重新安装最新版[懒人工具箱](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/jx.user.js)，基本可以解决。
+* 以上都没有解决，可以在浏览器右上角点击Tampermonkey，进入“管理面板”，在右上角“已安装脚本”页面删除所有脚本，进入右上角“设置”和“实用工具”中间的“回收站”，删除所有脚本，再重新安装最新版[懒人工具箱](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)，基本可以解决。
 
 2. 显示多个VIP图标怎么办？
-可能是你同时安装了多个版本的脚本，造成每个脚本生成了一个VIP图标。关闭其他版本，只保留最新版[懒人工具箱](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/jx.user.js)即可解决。
+可能是你同时安装了多个版本的脚本，造成每个脚本生成了一个VIP图标。关闭其他版本，只保留最新版[CK-toolbox](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)即可解决。
 
 3. safari浏览器怎么使用脚本？<br>
 safari可以使用Tampermonkey，但是因为浏览器内核不一样，使用中可能会有问题。
@@ -189,7 +189,7 @@ safari可以使用Tampermonkey，但是因为浏览器内核不一样，使用�
 一般情况不可以，有能力的可以自行研究。
 
 7. 脚本弹出更新提示怎么办？<br>
-脚本在发现新版本后会自动弹出更新提示。点击“忽略”则当天不会再有提示；点击“查看更新”并更新到[最新版](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/jx.user.js)的脚本则不会再有提示。 [点击更新](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/jx.user.js)
+脚本在发现新版本后会自动弹出更新提示。点击“忽略”则当天不会再有提示；点击“查看更新”并更新到[最新版](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)的脚本则不会再有提示。 [点击更新](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)
 
 </p>
 </details>
@@ -253,4 +253,4 @@ safari可以使用Tampermonkey，但是因为浏览器内核不一样，使用�
 
 ---
 
-[![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll)  [![Install](https://img.shields.io/badge/更新脚本-005200)](https://github.com/Zheng8907/silver-waffle/main/CK.user.js)
+[![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll)  [![Install](https://img.shields.io/badge/更新脚本-005200)](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)
