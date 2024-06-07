@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         创客IT工具箱
-// @namespace    lr-toolbox
+// @namespace    CK-toolbox
 // @version      6.7.0
 // @description  本脚本精选解析线路为大家提供优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
-// @author       lanhaha
+// @author       Evan
 // @updateURL    https://github.com/Zheng8907/silver-waffle/main/CK.user.js
 // @downloadURL  https://github.com/Zheng8907/silver-waffle/main/CK.user.js
 // @icon         https://greasyfork.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQwODg1LCJwdXIiOiJibG9iX2lkIn19--d856065eb6f5fbceb294794ebb26fb5b8b24fdf0/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMjAwLDIwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--90c313fa493e6bdf6f08eda1aca280dec66feb0f/2cac330a48a3fe2f0aefb1cf9c2a1efe.jpeg?locale=zh-CN

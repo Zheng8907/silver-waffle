@@ -13,7 +13,7 @@
 
 ## 安装TM
 
-运行脚本的浏览器需要先安装TamperMonkey或同类插件
+运行脚本的浏览器需要先安装Tampermonkey或同类插件
 
 <details><summary>Windows(展开)</summary>
 <p>
