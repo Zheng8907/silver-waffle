@@ -2,7 +2,7 @@
 
 
 创客IT工具箱
-
+- [脚本介绍](#脚本介绍)
 - [安装TM](#安装tm)
 - [安装脚本](#安装脚本)
     - [完整版](#安装脚本)
@@ -12,6 +12,25 @@
     - [移动端](#移动端)
 - [常见问题](#常见问题)
 - [更新日志](#更新日志)
+
+## 脚本介绍
+完整版
+<details><summary>完整版(展开)</summary>
+<p>
+    
+    此脚本精选解析线路为大家提供优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
+
+</P>
+</details>
+
+移动端增强版
+<details><summary>移动端增强版(展开)</summary>
+<p>
+    
+    支持：腾讯、爱奇艺、优酷、芒果、pptv、乐视等其它网站会员视频播放和下载，针对移动端同时兼容桌面网站和移动网站，本站内置播放，可通过图标选择播放频道和设置开/关实现自动播放/手动播放功能
+
+</p>
+</details>
 
 ## 安装TM
 
@@ -65,7 +84,7 @@ X浏览器和VIA浏览器自带插件，无需安装。
 
 <a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.0 版本-005200" height=35px /></a>
 
-**手机增强版**安装/更新地址: 
+**移动端增强版**安装/更新地址: 
 
 <a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/VIP.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V2.1.1 版本-005200" height=35px /></a>
 
