@@ -1,4 +1,4 @@
-[![platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Android%20%7C%20IOS-red.svg)](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js) [![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll) [![Install](https://img.shields.io/badge/安装-005200)](#安装脚本)
+[![platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Android%20%7C%20IOS-red.svg)](#安装脚本)[![Install](https://img.shields.io/badge/安装-005200)](#安装脚本)
 
 
 创客IT工具箱
@@ -14,27 +14,32 @@
 - [更新日志](#更新日志)
 
 ## 脚本介绍
-完整版
+
 <details><summary>完整版(展开)</summary>
 <p>
     
-    此脚本精选解析线路为大家提供优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
+    此脚本精选解析线路为大家提供
+    优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，
+    让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，
+    全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，
+    视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
 
 </P>
 </details>
 
-移动端增强版
 <details><summary>移动端增强版(展开)</summary>
 <p>
     
-    支持：腾讯、爱奇艺、优酷、芒果、pptv、乐视等其它网站会员视频播放和下载，针对移动端同时兼容桌面网站和移动网站，本站内置播放，可通过图标选择播放频道和设置开/关实现自动播放/手动播放功能
+支持：腾讯、爱奇艺、优酷、芒果、pptv、乐视等其它网站会员视频播放和下载，
+针对移动端同时兼容桌面网站和移动网站，本站内置播放，
+可通过图标选择播放频道和设置开/关实现自动播放/手动播放功能
 
 </p>
 </details>
 
 ## 安装TM
 
-运行脚本的浏览器需要先安装Tampermonkey或同类插件
+运行脚本的浏览器需要先安装Tampermonkey插件
 
 <details><summary>Windows(展开)</summary>
 <p>
@@ -56,7 +61,9 @@
 <details><summary>Android(展开)</summary>
 <p>
 
-X浏览器和VIA浏览器自带插件，无需安装。
+[X浏览器](https://www.xbext.com/)(自带插件)
+
+[VIA浏览器](https://viayoo.com/zh-cn/)(自带插件)
 
 [Kiwi浏览器](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=zh-CN) (需要科学上网)
 
@@ -66,7 +73,12 @@ X浏览器和VIA浏览器自带插件，无需安装。
 <details><summary>IOS(展开)</summary>
 <p>
 
-在 IOS 应用商店中搜索并安装 “stay” 或者 “拦截100”，不要用“UserScripts”。
+在 IOS 应用商店中搜索并安装 “stay”或者“Addons”，不要用“UserScripts”。
+
+[stay下载](https://apps.apple.com/cn/app/stay-for-safari-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%B4%E4%BE%A3/id1591620171?platform=iphone)
+
+[Addons下载](https://apps.apple.com/cn/app/addons-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA/id6446811843?platform=iphone)
+
 </p>
 </details>
 
@@ -84,7 +96,7 @@ X浏览器和VIA浏览器自带插件，无需安装。
 
 <a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.0 版本-005200" height=35px /></a>
 
-**移动端增强版**安装/更新地址: 
+**移动端增强版**安装/更新地址: (移动端强烈建议)
 
 <a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/VIP.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V2.1.1 版本-005200" height=35px /></a>
 
