@@ -30,8 +30,8 @@
 // @grant             GM_log
 // @charset		      UTF-8
 // @license           GPL License
-// @downloadURL https://update.greasyfork.org/scripts/496887/%E5%85%A8%E7%BD%91VIP%E8%A7%86%E9%A2%91%E4%BC%9A%E5%91%98.user.js
-// @updateURL https://update.greasyfork.org/scripts/496887/%E5%85%A8%E7%BD%91VIP%E8%A7%86%E9%A2%91%E4%BC%9A%E5%91%98.meta.js
+// @downloadURL       https://raw.kkgithub.com/Zheng8907/silver-waffle/main/VIP.user.js
+// @updateURL         https://raw.kkgithub.com/Zheng8907/silver-waffle/main/VIP.user.js
 // ==/UserScript==
 
 const util = (function () {
