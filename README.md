@@ -4,7 +4,7 @@
 创客IT工具箱
 
 - [安装TM](#安装tm)
-- [安装脚本]
+- [安装脚本](#安装脚本)
     - [完整版](#安装脚本)
     - [手机增强版](#安装脚本)
 - [使用](#使用)
@@ -65,7 +65,7 @@ X浏览器和VIA浏览器自带插件，无需安装。
 
 <a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.0 版本-005200" height=35px /></a>
 
-**完整版**安装/更新地址: 
+**手机增强版**安装/更新地址: 
 
 <a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/VIP.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V2.1.1 版本-005200" height=35px /></a>
 
@@ -258,4 +258,4 @@ safari可以使用Tampermonkey，但是因为浏览器内核不一样，使用�
 
 ---
 
-[![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll)  [![Install](https://img.shields.io/badge/更新脚本-005200)](https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js)
+[![Telegram](https://img.shields.io/badge/Telegram-issues-blue?logo=telegram)](https://t.me/+sGo6ZZvy54wzYTll)  [![Install](https://img.shields.io/badge/更新脚本-005200)](#安装脚本)
