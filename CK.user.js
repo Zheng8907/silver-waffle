@@ -3,7 +3,7 @@
 // @namespace    CK-toolbox
 // @version      6.7.0
 // @description  此脚本精选解析线路为大家提供优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
-// @author       lanhaha
+// @author       zheng8907
 // @updateURL    https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js
 // @downloadURL  https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js
 // @icon         https://greasyfork.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQwODg1LCJwdXIiOiJibG9iX2lkIn19--d856065eb6f5fbceb294794ebb26fb5b8b24fdf0/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMjAwLDIwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--90c313fa493e6bdf6f08eda1aca280dec66feb0f/2cac330a48a3fe2f0aefb1cf9c2a1efe.jpeg?locale=zh-CN
@@ -68,16 +68,17 @@
 
     domStyle.rel = 'stylesheet';
     //平台判断
-    var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+    var isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
     if(isMobile){
 
         let playLine = [
-            {"name":"纯净1","url":"https://im1907.top/?jx="},
-            {"name":"B站1","url":"https://jx.jsonplayer.com/player/?url="},
-            {"name":"爱豆","url":"https://jx.aidouer.net/?url="},
-            {"name":"听乐","url":"https://jx.dj6u.com/?url="},
-            {"name":"YT","url":"https://jx.yangtu.top/?url="}
+            { "name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url=" },//虾米
+            { "name": "频道2", "type": "1,3", "url": "https://jx.aidouer.net/?url=" },//爱豆
+            { "name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url=" },//夜幕
+            { "name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url=" },//冰豆
+            { "name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx=" },//m1907
+            { "name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url=" },//yparse
         ];
 
         let useWeb = ['m.bilibili.com','youku.com','www.youku.com','m.youku.com','3g.v.qq.com','m.v.qq.com','m.iqiyi.com','m.mgtv.com','m.tv.sohu.com','m.1905.com','m.pptv.com','m.le.com'];
@@ -565,33 +566,13 @@
             ]}],
 
             playLine:[
-                {"name":"纯净1","url":"https://im1907.top/?jx=","mobile":1},
-                {"name":"B站1","url":"https://jx.jsonplayer.com/player/?url=","mobile":1},
-                {"name":"YT","url":"https://jx.yangtu.top/?url=","mobile":0},
-                {"name":"BL","url":"https://vip.bljiex.com/?v=","mobile":0},
-                {"name":"冰豆","url":"https://bd.jx.cn/?url=","mobile":0},
-                {"name":"CK","url":"https://www.ckplayer.vip/jiexi/?url=","mobile":0},
-                {"name":"IK9","url":"https://yparse.ik9.cc/index.php?url=","mobile":0},
-                {"name":"弹幕","url":"https://dmjx.m3u8.tv/?url=","mobile":0},
-                {"name":"JY","url":"https://jx.playerjy.com/?url=","mobile":0},
-                {"name":"解析la","url":"https://api.jiexi.la/?url=","mobile":0},
                 {"name":"M3U8","url":"https://jx.m3u8.tv/jiexi/?url=","mobile":0},
                 {"name":"PM","url":"https://www.playm3u8.cn/jiexi.php?url=","mobile":0},
-                {"name":"盘古","url":"https://www.pangujiexi.cc/jiexi.php?url=","mobile":0},
-                {"name":"盘古2","url":"https://www.pangujiexi.com/jiexi/?url=","mobile":0},
                 {"name":"剖云","url":"https://www.pouyun.com/?url=","mobile":0},
-                {"name":"七哥","url":"https://jx.nnxv.cn/tv.php?url=","mobile":0},
-                {"name":"神哥","url":"https://json.ovvo.pro/jx.php?url=","mobile":0},
-                {"name":"听乐","url":"https://jx.dj6u.com/?url=","mobile":1},
-                {"name":"维多","url":"https://jx.ivito.cn/?url=","mobile":0},
                 {"name":"虾米","url":"https://jx.xmflv.com/?url=","mobile":0},
                 {"name":"虾米2","url":"https://jx.xmflv.cc/?url=","mobile":0},
                 {"name":"夜幕","url":"https://www.yemu.xyz/?url=","mobile":0},
                 {"name":"云析","url":"https://jx.yparse.com/index.php?url=","mobile":0},
-                {"name":"17云","url":"https://www.1717yun.com/jx/ty.php?url=","mobile":0},
-                {"name":"180","url":"https://jx.000180.top/jx/?url=","mobile":0},
-                {"name":"2ys","url":"https://gj.fenxiangb.com/player/analysis.php?v=","mobile":0},
-                {"name":"8090","url":"https://www.8090g.cn/?url=","mobile":0}
             ],
 
             zhNice:[{isOpen:GM_getValue('zhihuList','22'),web:[
@@ -1134,35 +1115,16 @@
                     'textarea':'videoPlayLineAddTextarea',
                     'textareaId':'playVideoLineTextarea',
                     'tip':
-`纯净1,https://im1907.top/?jx=
-B站1,https://jx.jsonplayer.com/player/?url=
-YT,https://jx.yangtu.top/?url=
-BL,https://vip.bljiex.com/?v=
-冰豆,https://bd.jx.cn/?url=
-CK,https://www.ckplayer.vip/jiexi/?url=
-弹幕,https://dmjx.m3u8.tv/?url=
-IK9,https://yparse.ik9.cc/index.php?url=
-JY,https://jx.playerjy.com/?url=
-解析la,https://api.jiexi.la/?url=
-M3U8,https://jx.m3u8.tv/jiexi/?url=
-PM,https://www.playm3u8.cn/jiexi.php?url=
-盘古,https://www.pangujiexi.cc/jiexi.php?url=
-盘古2,https://www.pangujiexi.com/jiexi/?url=
-剖云,https://www.pouyun.com/?url=
-七哥,https://jx.nnxv.cn/tv.php?url=
-神哥,https://json.ovvo.pro/jx.php?url=
-听乐,https://jx.dj6u.com/?url=
-维多,https://jx.ivito.cn/?url=
-虾米,https://jx.xmflv.com/?url=
-虾米2,https://jx.xmflv.cc/?url=
-夜幕,https://www.yemu.xyz/?url=
-云析,https://jx.yparse.com/index.php?url=
-17云,https://www.1717yun.com/jx/ty.php?url=
-180,https://jx.000180.top/jx/?url=
-2ys,https://gj.fenxiangb.com/player/analysis.php?v=
-8090,https://www.8090g.cn/?url=`,
 
-                     'valueName':'playVideoLineText'}
+                    `M3U8,https://jx.m3u8.tv/jiexi/?url=
+                     PM,https://www.playm3u8.cn/jiexi.php?url=
+                     剖云,https://www.pouyun.com/?url=
+                     虾米,https://jx.xmflv.com/?url=
+                     虾米2,https://jx.xmflv.cc/?url=
+                     夜幕,https://www.yemu.xyz/?url=
+                     云析,https://jx.yparse.com/index.php?url=`,
+
+                    'valueName':'playVideoLineText'}
 
                 var videoDownloadOptionJson = [
                     {'optionName':lang.dyVideoDownload,'optionID':'dyVideoDownload','default':dyVideoDownload},
@@ -1417,7 +1379,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 setHtml +="<ul class='iconSetFootLi'>";
 
-                setHtml +="<li><a href='https://gitlab.com/lanhaha/lanrenjiaoben' target='_blank'>"+lang.scriptsinstall+"</a></li>・<li><a href='https://gitlab.com/lanhaha/lanrenjiaoben#%E4%BD%BF%E7%94%A8' target='_blank'>"+lang.scriptsuse+"</a></li>・<li><a href='https://gitlab.com/lanhaha/lanrenjiaoben#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98' target='_blank'>"+lang.question+"</a></li>・<li><a href='https://t.me/+sGo6ZZvy54wzYTll' target='_blank'>"+lang.tggroup+"</a></li>";
+                setHtml +="<li><a href='https://gitlab.com/zheng8907/web_script' target='_blank'>"+lang.scriptsinstall+"</a></li>・<li><a href='https://gitlab.com/zheng8907/web_script#%E4%BD%BF%E7%94%A8' target='_blank'>"+lang.scriptsuse+"</a></li>・<li><a href='https://gitlab.com/zheng8907/web_script#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98' target='_blank'>"+lang.question+"</a></li>・<li><a href='https://t.me/+sGo6ZZvy54wzYTll' target='_blank'>"+lang.tggroup+"</a></li>";
 
                 setHtml +='</ul>';
 
@@ -4770,9 +4732,9 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                 super();
 
-                this.versionUrl = 'https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/README.md?ref_type=heads';
+                this.versionUrl = 'https://gitlab.com/zheng8907/web_script/-/raw/main/README.md?ref_type=heads';
 
-                this.renewVersionUrl = 'https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/jx.user.js';
+                this.renewVersionUrl = 'https://gitlab.com/zheng8907/web_script/-/raw/main/CK.user.js';
 
                 var _this = this;
 

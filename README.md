@@ -1,9 +1,9 @@
 [![platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Mac%20%7C%20Android%20%7C%20IOS-red.svg)](#安装脚本)[![Install](https://img.shields.io/badge/安装-005200)](#安装脚本)
 
+- 全网VIP视频免费看脚本
 
-创客IT工具箱
-- [脚本介绍](#脚本介绍)
-- [安装TM](#安装tm)
+- [脚本功能介绍](#脚本介绍)
+- [安装油猴tampermonkey](#油猴tampermonkey)
 - [安装脚本](#安装脚本)
     - [完整版](#安装脚本)
     - [手机增强版](#安装脚本)
@@ -37,10 +37,9 @@
 </p>
 </details>
 
-## 安装TM
+## 油猴tampermonkey
 
-运行脚本的浏览器需要先安装Tampermonkey插件
-
+注意！安装脚本前必须先安装浏览器油猴Tampermonkey插件
 <details><summary>Windows(展开)</summary>
 <p>
 
@@ -73,7 +72,7 @@
 <details><summary>IOS(展开)</summary>
 <p>
 
-在 IOS 应用商店中搜索并安装 “stay”或者“Addons”，不要用“UserScripts”。
+ 可在IOS应用商店中搜索并安装 “stay”或者“Addons”，不要用“UserScripts”。
 
 [stay下载](https://apps.apple.com/cn/app/stay-for-safari-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%B4%E4%BE%A3/id1591620171?platform=iphone)
 
