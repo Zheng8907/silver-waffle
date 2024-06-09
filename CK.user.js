@@ -572,7 +572,6 @@
                 { "name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url=" },//冰豆
                 { "name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx=" },//m1907
                 { "name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url=" },//yparse
-
             ],
 
             zhNice:[{isOpen:GM_getValue('zhihuList','22'),web:[
