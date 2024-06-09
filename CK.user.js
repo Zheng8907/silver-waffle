@@ -566,13 +566,13 @@
             ]}],
 
             playLine:[
-                {"name":"M3U8","url":"https://jx.m3u8.tv/jiexi/?url=","mobile":0},
-                {"name":"PM","url":"https://www.playm3u8.cn/jiexi.php?url=","mobile":0},
-                {"name":"剖云","url":"https://www.pouyun.com/?url=","mobile":0},
-                {"name":"虾米","url":"https://jx.xmflv.com/?url=","mobile":0},
-                {"name":"虾米2","url":"https://jx.xmflv.cc/?url=","mobile":0},
-                {"name":"夜幕","url":"https://www.yemu.xyz/?url=","mobile":0},
-                {"name":"云析","url":"https://jx.yparse.com/index.php?url=","mobile":0}
+                { "name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url=" },//虾米
+                { "name": "频道2", "type": "1,3", "url": "https://jx.aidouer.net/?url=" },//爱豆
+                { "name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url=" },//夜幕
+                { "name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url=" },//冰豆
+                { "name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx=" },//m1907
+                { "name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url=" },//yparse
+
             ],
 
             zhNice:[{isOpen:GM_getValue('zhihuList','22'),web:[
