@@ -572,7 +572,7 @@
                 {"name":"虾米","url":"https://jx.xmflv.com/?url=","mobile":0},
                 {"name":"虾米2","url":"https://jx.xmflv.cc/?url=","mobile":0},
                 {"name":"夜幕","url":"https://www.yemu.xyz/?url=","mobile":0},
-                {"name":"云析","url":"https://jx.yparse.com/index.php?url=","mobile":0},
+                {"name":"云析","url":"https://jx.yparse.com/index.php?url=","mobile":0}
             ],
 
             zhNice:[{isOpen:GM_getValue('zhihuList','22'),web:[
@@ -1116,13 +1116,13 @@
                     'textareaId':'playVideoLineTextarea',
                     'tip':
 
-                    `M3U8,https://jx.m3u8.tv/jiexi/?url=
-                     PM,https://www.playm3u8.cn/jiexi.php?url=
-                     剖云,https://www.pouyun.com/?url=
-                     虾米,https://jx.xmflv.com/?url=
-                     虾米2,https://jx.xmflv.cc/?url=
-                     夜幕,https://www.yemu.xyz/?url=
-                     云析,https://jx.yparse.com/index.php?url=`,
+`M3U8,https://jx.m3u8.tv/jiexi/?url=
+PM,https://www.playm3u8.cn/jiexi.php?url=
+剖云,https://www.pouyun.com/?url=
+虾米,https://jx.xmflv.com/?url=
+虾米2,https://jx.xmflv.cc/?url=
+夜幕,https://www.yemu.xyz/?url=
+云析,https://jx.yparse.com/index.php?url=`,
 
                     'valueName':'playVideoLineText'}
 
