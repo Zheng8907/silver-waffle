@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              全网VIP视频会员
 // @namespace         http://tampermonkey.net/
-// @version           2.1.1
+// @version           2.1.2
 // @description       全网VIP视频免费观看，支持：腾讯、爱奇艺、优酷、芒果、pptv、乐视等其它网站；支持PC端和移动端。
 // @icon              https://greasyfork.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQwODg1LCJwdXIiOiJibG9iX2lkIn19--d856065eb6f5fbceb294794ebb26fb5b8b24fdf0/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMjAwLDIwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--90c313fa493e6bdf6f08eda1aca280dec66feb0f/2cac330a48a3fe2f0aefb1cf9c2a1efe.jpeg?locale=zh-CN
 // @author            创客云IT
@@ -126,9 +126,9 @@ const superVip = (function () {
             {"name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url="},//虾米
             {"name": "频道2", "type": "1,3", "url": "https://jx.aidouer.net/?url="},//爱豆
             {"name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url="},//夜幕
-            {"name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url="},//冰豆
-            {"name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx="},//m1907
-            {"name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url="},//yparse
+            //{"name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url="},//冰豆
+           // {"name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx="},//m1907
+           // {"name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url="},//yparse
         ],
         playerContainers: [
             {

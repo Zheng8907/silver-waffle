@@ -93,11 +93,11 @@
    
 **完整版**安装/更新地址: 
 
-<a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.0 版本-005200" height=35px /></a>
+<a href="https://gitlab.com/zheng8907/web_script/-/raw/main/CK.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V6.7.2 版本-005200" height=35px /></a>
 
 **移动端增强版**安装/更新地址: (移动端强烈建议)
 
-<a href="https://raw.kkgithub.com/Zheng8907/silver-waffle/main/VIP.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V2.1.1 版本-005200" height=35px /></a>
+<a href="https://gitlab.com/zheng8907/web_script/-/raw/main/VIP.user.js" rel="nofollow"><img src="https://img.shields.io/badge/更新到 V2.1.2 版本-005200" height=35px /></a>
 
 ## 使用
 
@@ -106,7 +106,8 @@
 <details><summary>脚本设置(重要)(展开)</summary>
 <p>
 
-![脚本设置](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/img/jbsetup.jpg)
+![脚本设置](https://gitlab.com/zheng8907/web_script/-/raw/main/img/12.png)
+![](https://gitlab.com/zheng8907/web_script/-/raw/main/img/2.png)
 
     浏览器打开任意脚本可加载的网站，例如优酷、知乎、b站等，
     在右上角Tampermonkey中打开脚本设置。
@@ -120,7 +121,7 @@
 
 一，视频解析
 
-![解析图标](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/img/zhanwai.jpg)
+![解析图标](https://gitlab.com/zheng8907/web_script/-/raw/main/img/zhanwai.jpg)
 
     站内解析:
     1. 脚本“设置”-“解析设置”-“站外解析”调整为关闭状态
@@ -136,7 +137,7 @@
 
 二，视频下载
 
-![抖音下载](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/img/douyin.jpg)
+![抖音下载](https://gitlab.com/zheng8907/web_script/-/raw/main/img/douyin.jpg)
 
     1. 在douyin.com/kuaishou.com/xigua.com/bilibili.com任意视频播放窗口的下方播放工具条找到下载按钮
     2. 选择对应的下载方式点击就可以下载
@@ -189,7 +190,7 @@
 <details><summary>观看VIP视频(展开)</summary>
 <p>
 
-![移动vip](https://gitlab.com/lanhaha/lanrenjiaoben/-/raw/main/img/mobile.jpg)
+![移动vip](https://gitlab.com/zheng8907/web_script/-/raw/main/img/IMG_2666.png)
 
     浏览任意单个视频，鼠标点击左侧红色VIP图标，在弹出的窗口选择合适的线路点击即可在网页内播放。
 </p>

@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         创客IT工具箱
-// @namespace    CK-toolbox
-// @version      6.7.0
-// @description  此脚本精选解析线路为大家提供优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
+// @name         全网VIP工具箱
+// @namespace    VIP-toolbox
+// @version      6.7.2
+// @description  本脚本精选解析线路为大家提供优酷、爱奇艺、腾讯、B站(bilibili)、乐视、芒果等各大视频网站(PC+移动端)视频解析服务，让你省去购买视频VIP费用，同时提供知乎增强(知乎视频下载、去广告、去除侧边栏、关键词屏蔽等会员功能)，全网音乐和有声书免客户端下载(网易云音乐、QQ音乐、酷狗、酷我、虾米、蜻蜓FM、荔枝FM、喜马拉雅等)，视频无水印下载(bilibili、抖音、快手、西瓜、youtube)，自动查券功能，所有功能互不影响，可独立开关。
 // @author       zheng8907
-// @updateURL    https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js
-// @downloadURL  https://raw.kkgithub.com/Zheng8907/silver-waffle/main/CK.user.js
+// @updateURL    https://gitlab.com/zheng8907/web_script/-/blob/main/CK.user.js?ref_type=heads
+// @downloadURL  https://gitlab.com/zheng8907/web_script/-/blob/main/CK.user.js?ref_type=heads
 // @icon         https://greasyfork.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQwODg1LCJwdXIiOiJibG9iX2lkIn19--d856065eb6f5fbceb294794ebb26fb5b8b24fdf0/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMjAwLDIwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--90c313fa493e6bdf6f08eda1aca280dec66feb0f/2cac330a48a3fe2f0aefb1cf9c2a1efe.jpeg?locale=zh-CN
 // @match        *://*.youku.com/*
 // @match        *://*.iqiyi.com/*
@@ -68,17 +68,21 @@
 
     domStyle.rel = 'stylesheet';
     //平台判断
-    var isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
 
     if(isMobile){
 
         let playLine = [
-            { "name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url=" },//虾米
-            { "name": "频道2", "type": "1,3", "url": "https://jx.aidouer.net/?url=" },//爱豆
-            { "name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url=" },//夜幕
-            { "name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url=" },//冰豆
-            { "name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx=" },//m1907
-            { "name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url=" },//yparse
+            { "name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url=", "mobile": 0 },//虾米
+            { "name": "频道2", "type": "1,3", "url": "https://jx.xmflv.cc/?url=", "mobile": 0 },//虾米2
+            { "name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url=", "mobile": 0 },//夜幕
+            { "name": "频道4", "type": "1,3", "url": "https://jx.m3u8.tv/jiexi/?url=", "mobile": 0 },//M3U8
+            { "name": "频道5", "type": "1,3", "url": "https://jx.aidouer.net/?url=", "mobile": 0 },//爱豆
+            { "name": "频道6", "type": "1,3", "url": "https://www.playm3u8.cn/jiexi.php?url=", "mobile": 0 },//PM
+            { "name": "频道7", "type": "1,3", "url": "https://yparse.ik9.cc/index.php?url=", "mobile": 0 },//IK9
+            { "name": "频道8", "type": "1,3", "url": "https://jx.yparse.com/index.php?url=", "mobile": 0 },//云析
+            { "name": "频道8", "type": "1,3", "url": "https://jx.nnxv.cn/tv.php?url=", "mobile": 0 }, //七哥
+            { "name": "频道8", "type": "1,3", "url": "https://www.ckplayer.vip/jiexi/?url=", "mobile": 0 }//CK
         ];
 
         let useWeb = ['m.bilibili.com','youku.com','www.youku.com','m.youku.com','3g.v.qq.com','m.v.qq.com','m.iqiyi.com','m.mgtv.com','m.tv.sohu.com','m.1905.com','m.pptv.com','m.le.com'];
@@ -511,15 +515,21 @@
         var datas = {
 
             getCoupon:[{isOpen:22,web:[
+                //new
+                {funcName:"coupon",name:"taobao",node:".Actions--root--NWE5_Ko",match:/item\.taobao\.com/},
+                {funcName:"coupon",name:"tmall",node:".Actions--root--NWE5_Ko",match:/^https?:\/\/detail\.tmall\.com/},
+                {funcName:"coupon",name:"tmall",node:".Actions--leftButtons--1M3KkF7",match:/^https?:\/\/detail\.tmall\.hk/},
+                //old
                 {funcName:"coupon",name:"taobao",node:".Actions--leftButtons--1M3KkF7",match:/item\.taobao\.com/},
                 {funcName:"coupon",name:"tmallCaoshi",node:"#J_LinkBuy",match:/^https?:\/\/chaoshi.detail.tmall.com\//},
                 {funcName:"coupon",name:"tmallCaoshi",node:".Actions--leftButtons--1M3KkF7",match:/^https?:\/\/chaoshi.detail.tmall.com\//},
                 {funcName:"coupon",name:"tmall",node:".BasicContent--actions--1co8sx8",match:/^https?:\/\/detail\.tmall\.com/},
                 {funcName:"coupon",name:"tmall",node:"#J_LinkBuy",match:/^https?:\/\/detail\.tmall\.com/},
                 {funcName:"coupon",name:"tmallOther",node:".tm-msg-box",match:/^https?:\/\/detail\.tmall\.com/},
-                {funcName:"coupon",name:"tmall",node:".BasicContent--actions--1co8sx8",match:/^https?:\/\/detail\.tmall\.hk/},
+                //{funcName:"coupon",name:"tmall",node:".BasicContent--actions--1co8sx8",match:/^https?:\/\/detail\.tmall\.hk/},
                 {funcName:"coupon",name:"jd",node:"#choose-btns",match:/item\.jd\.com/},
                 {funcName:"coupon",name:"jd",node:"#choose-btns",match:/\.yiyaojd\.com/},
+                {funcName:"coupon",name:"jd",node:".qrcode",match:/item\.jd\.com/},
                 {funcName:"coupon",name:"jd",node:"#choose-btns",match:/npcitem\.jd\.hk/},
             ]}],
             jxVideo:[{isOpen:GM_getValue('movieList','22'),web:[
@@ -552,7 +562,7 @@
                 {funcName:"playVideo",match:/1905\.com/},
 
             ]}],
-
+            
             jxMusic:[{isOpen:GM_getValue('musicList','22'),web:[
                 {funcName:"playMusic",name:'netease',match:/^https?:\/\/music\.163\.com/,tip:'请在音乐单曲页点击图标下载'},
 
@@ -566,12 +576,16 @@
             ]}],
 
             playLine:[
-                { "name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url=" },//虾米
-                { "name": "频道2", "type": "1,3", "url": "https://jx.aidouer.net/?url=" },//爱豆
-                { "name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url=" },//夜幕
-                { "name": "频道4", "type": "1,3", "url": "https://bd.jx.cn/?url=" },//冰豆
-                { "name": "频道5", "type": "1,2", "url": "https://im1907.top/?jx=" },//m1907
-                { "name": "频道6", "type": "1,2", "url": "https://jx.yparse.com/index.php?url=" },//yparse
+                { "name": "频道1", "type": "1,3", "url": "https://jx.xmflv.com/?url=", "mobile": 0 },//虾米
+                { "name": "频道2", "type": "1,3", "url": "https://jx.xmflv.cc/?url=", "mobile": 0 },//虾米2
+                { "name": "频道3", "type": "1,3", "url": "https://www.yemu.xyz/?url=", "mobile": 0 },//夜幕
+                { "name": "频道4", "type": "1,3", "url": "https://jx.m3u8.tv/jiexi/?url=", "mobile": 0 },//M3U8
+                { "name": "频道5", "type": "1,3", "url": "https://jx.aidouer.net/?url=", "mobile": 0 },//爱豆
+                { "name": "频道6", "type": "1,3", "url": "https://www.playm3u8.cn/jiexi.php?url=", "mobile": 0 },//PM
+                { "name": "频道7", "type": "1,3", "url": "https://yparse.ik9.cc/index.php?url=", "mobile": 0 },//IK9
+                { "name": "频道8", "type": "1,3", "url": "https://jx.yparse.com/index.php?url=", "mobile": 0 },//云析
+                { "name": "频道8", "type": "1,3", "url": "https://jx.nnxv.cn/tv.php?url=", "mobile": 0 }, //七哥
+                { "name": "频道8", "type": "1,3", "url": "https://www.ckplayer.vip/jiexi/?url=", "mobile": 0 }//CK
             ],
 
             zhNice:[{isOpen:GM_getValue('zhihuList','22'),web:[
@@ -580,9 +594,9 @@
             taobao:[{isOpen:GM_getValue('taobao','22'),web:[
                 {funcName:'taobaoSearch',match:/^https?:\/\/s\.taobao\.com\/search\?.+/}
             ]}],
-            
+
             videoDownload:[{isOpen:GM_getValue('videoDownloadList','22'),web:[
-                
+ 
                 {funcName:'videoDownload',name:'dyVideoDownload',match:/^https?:\/\/www\.douyin\.com\/?.+$/,isWebOpen:dyVideoDownload},
                 {funcName:'videoDownload',name:'ksVideoDownload',match:/^https?:\/\/www\.kuaishou\.com\/?.+$/,isWebOpen:ksVideoDownload},
                 {funcName:'videoDownload',name:'xiguaVideoDownload',match:/^https?:\/\/www\.ixigua\.com\//,isWebOpen:xiguaVideoDownload},
@@ -633,7 +647,7 @@
             constructor(){
 
                 if(GM_getValue('iconPositionSetPage') != 0){
-
+                   
                     iconVipTop = GM_getValue('iconTop') || GM_getValue('iconTop') == 0?GM_getValue('iconTop'):iconVipTop;
 
                     iconVipPosition = GM_getValue('iconPosition')?GM_getValue('iconPosition'):iconVipPosition;
@@ -1114,16 +1128,19 @@
                     'textarea':'videoPlayLineAddTextarea',
                     'textareaId':'playVideoLineTextarea',
                     'tip':
+                        `纯净1,https://im1907.top/?jx=
+                        冰豆,https://bd.jx.cn/?url=
+                        CK,https://www.ckplayer.vip/jiexi/?url=
+                        IK9,https://yparse.ik9.cc/index.php?url=
+                        M3U8,https://jx.m3u8.tv/jiexi/?url=
+                        PM,https://www.playm3u8.cn/jiexi.php?url=
+                        七哥,https://jx.nnxv.cn/tv.php?url=
+                        虾米,https://jx.xmflv.com/?url=
+                        虾米2,https://jx.xmflv.cc/?url=
+                        夜幕,https://www.yemu.xyz/?url=
+                        云析,https://jx.yparse.com/index.php?url=`,
 
-`M3U8,https://jx.m3u8.tv/jiexi/?url=
-PM,https://www.playm3u8.cn/jiexi.php?url=
-剖云,https://www.pouyun.com/?url=
-虾米,https://jx.xmflv.com/?url=
-虾米2,https://jx.xmflv.cc/?url=
-夜幕,https://www.yemu.xyz/?url=
-云析,https://jx.yparse.com/index.php?url=`,
-
-                    'valueName':'playVideoLineText'}
+                     'valueName':'playVideoLineText'}
 
                 var videoDownloadOptionJson = [
                     {'optionName':lang.dyVideoDownload,'optionID':'dyVideoDownload','default':dyVideoDownload},
@@ -1378,7 +1395,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 setHtml +="<ul class='iconSetFootLi'>";
 
-                setHtml +="<li><a href='https://gitlab.com/zheng8907/web_script' target='_blank'>"+lang.scriptsinstall+"</a></li>・<li><a href='https://gitlab.com/zheng8907/web_script#%E4%BD%BF%E7%94%A8' target='_blank'>"+lang.scriptsuse+"</a></li>・<li><a href='https://gitlab.com/zheng8907/web_script#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98' target='_blank'>"+lang.question+"</a></li>・<li><a href='https://t.me/+sGo6ZZvy54wzYTll' target='_blank'>"+lang.tggroup+"</a></li>";
+                setHtml += "<li><a href='https://gitlab.com/zheng8907/web_script' target='_blank'>" + lang.scriptsinstall + "</a></li>・<li><a href='https://gitlab.com/zheng8907/web_script#%E4%BD%BF%E7%94%A8' target='_blank'>" + lang.scriptsuse +"</a></li>・<li><a href='https://gitlab.com/zheng8907/web_script#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98' target='_blank'>"+lang.question+"</a></li>・<li><a href='' target='_blank'>"+lang.tggroup+"</a></li>";
 
                 setHtml +='</ul>';
 
@@ -1452,28 +1469,24 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                                     document.querySelector('#zhihuKeyword').style.display='block';
 
-                                    //document.querySelector('#zhmTakePlace').style= 'height:220px';
                                 }
 
                                 if(setListID == 'removeKeyword' && listLeftValue==0){
 
                                     document.querySelector('#zhihuKeyword').style.display='none';
 
-                                    //document.querySelector('#zhmTakePlace').style= 'height:180px';
                                 }
 
                                 if(setListID == 'removeAuthorName' && listLeftValue==22){
 
                                     document.querySelector('#zhihuAuthorName').style.display='block';
 
-                                    //document.querySelector('#zhmTakePlace').style= 'height:260px';
                                 }
 
                                 if(setListID == 'removeAuthorName' && listLeftValue==0){
 
                                     document.querySelector('#zhihuAuthorName').style.display='none';
 
-                                    //document.querySelector('#zhmTakePlace').style= 'height:120px';
                                 }
 
                                 GM_setValue(setListID,listLeftValue);
@@ -1567,8 +1580,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                                         return false;
                                     }
 
-                                    //_this.setCookie('iconTop',iconTop,30);
-
                                     GM_setValue('iconTop',iconTop);
                                 }
 
@@ -1581,14 +1592,10 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                                         return false;
                                     }
 
-                                    //_this.setCookie('iconTop',iconTop,30);
-                                    //alert(iconOpacity);return;
                                     GM_setValue('iconOpacity',iconOpacity);
                                 }
 
                                 if(iconPosition != ''){
-
-                                    //_this.setCookie('iconPosition',iconPosition,30);
 
                                     GM_setValue('iconPosition',iconPosition);
                                 }
@@ -1606,8 +1613,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                                         return false;
                                     }
-
-                                    //_this.setCookie('iconWidth',iconWidth,30);
 
                                     GM_setValue('iconWidth',iconWidth);
                                 }
@@ -1783,7 +1788,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                     }
 
                     request.open(method,url);
-                    //request.withCredentials = true;
+
                     if(isCookie){
                         request.withCredentials = true;
                     }
@@ -1863,7 +1868,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 }
             }
-            //all参数默认空，是真时返回为数组
+
             static getElement(css,all=''){
 
                 return new Promise((resolve,reject)=>{
@@ -1921,7 +1926,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 toastDom.innerHTML = msg;
 
-                //toastDom.style.cssText="width: 60%;min-width: 150px;opacity: 0.7;height: 30px;color: rgb(255, 255, 255);line-height: 30px;text-align: center;border-radius: 5px;position: fixed;top: 40%;left: 20%;z-index: 999999;background: rgb(0, 0, 0);font-size: 12px;";
                 toastDom.style.cssText='padding:2px 15px;min-height: 36px;line-height: 36px;text-align: center;transform: translate(-50%);border-radius: 4px;color: rgb(255, 255, 255);position: fixed;top: 50%;left: 50%;z-index: 9999999;background: rgb(0, 0, 0);font-size: 16px;'
 
                 document.body.appendChild(toastDom);
@@ -1939,7 +1943,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                 }, duration);
 
             }
-            //create zhmLogoIcon
+
             zhmLogo(){
 
                var _this = this;
@@ -2019,9 +2023,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 playWrapHtml += `<div>`;
 
-                //let zhmIconIdLength = Math.floor(Math.random()*(16-8+1)+8);
-
-                //let zhmIconId = _this.randomString(zhmIconIdLength);
 
                 _this.createElement('div',_this.className.zhmIcon);
 
@@ -2030,8 +2031,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                 zhmPlay.innerHTML = playWrapHtml;
 
             }
-            //左键按下拖动
-            //type:根据不同类型，处理图标单击事务
+
             zhmLogoDrag(type,web){
 
                 var _this = this;
@@ -2054,7 +2054,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                     if(event.target.className != _this.className.iconLogo)return;
 
-                    //let shiftX = event.clientX - zhmLogoDrag.getBoundingClientRect().left;
                     let shiftx = 5;
 
                     let shiftY = event.clientY-zhmLogoDrag.getBoundingClientRect().top;
@@ -2067,7 +2066,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                     function onMouseMove(event){
 
-                        //zhmLogoDrag.style.left = pageX - shiftX + 'px';
                         zhmLogoDrag.style.left = '5px';
 
                         let height = window.innerHeight - zhmLogoIconHeight-bottomSpace;
@@ -2079,9 +2077,9 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                         zhmLogoDrag.style.top = y+'px';
 
                     }
-                    //在mousemove事件上移动图标
+
                     document.addEventListener('mousemove',onMouseMove);
-                    //松开事件
+
                     document.onmouseup = function(e){
 
                         GM_setValue('iconTop',zhmLogoDrag.offsetTop);
@@ -2116,10 +2114,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                             case 'music':
 
                                 if(zhmLogoDrag.offsetTop==sedownTop && e.target.className == _this.className.iconLogo){
-
-                                    //document.removeEventListener('mousemove', onMouseMove);
-
-                                    //zhmLogoDrag.onmouseup = null;
 
                                     let musicUrlData = [
                                         {match:/^https?:\/\/music\.163\.com\/#\/(?:song|dj)\?id/},
@@ -2170,8 +2164,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                                         let neteaseUrlEncode = encodeURIComponent('https://music.163.com/song?id='+urlParams.id);
 
-                                        //let openUrl = webUrl+'?url='+neteaseUrlEncode;
-
                                         let openUrl = webUrl+"?id="+urlParams.id+"&type=netease"
 
                                         window.open(openUrl);
@@ -2218,6 +2210,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                                         }
                                         BaseClass.toast('请点击播放需要下载的歌曲，然后在网页下方播放器内点击"下载"',2000)
 
+ 
                                     }
 
                                     function kuwoFun(){
@@ -2226,6 +2219,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                                         BaseClass.toast('请点击播放需要下载的歌曲，然后在网页下方播放器内点击"下载"',2000)
 
+ 
                                     }
 
                                     function ximalayaFun(){
@@ -2303,7 +2297,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                     'playLineTd',
                     'playLineDiv',
                     'zhm_div_s',//id
-                    'zhm_coupon',//coupon start
+                    'zhm_coupon',
                     'zhm_left',
                     'zhm_img_icon',
                     'zhm_content',
@@ -2321,6 +2315,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
                     'zhm_qrcode',
                     'jdCouponLink',//id
                     'tbqrcode',//id
+                    'jdqrcode',//id
                 ];
 
                 let objClassName = {};
@@ -2352,36 +2347,34 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 var _this = this;
 
-                let node = document.querySelector('.Actions--leftButtons--1M3KkF7');
-
-                node.style='overflow:inherit;'
-
                 let className = 'zhm_tab_taobao';
 
                 let shopNameCss = ['.tb-shop-name > dl > dd > strong > a','.shop-name-link'];
 
-                _this.getTitleShop(node,className,'.ItemHeader--mainTitle--3CIjqW5',shopNameCss)
+                let node = this.nodeDom;
+
+                _this.getTitleShop(node,className,'.ItemHeader--mainTitle--1rJcXZz',shopNameCss)
 
             }
             tmall(){
 
                 var _this = this;
 
-                let node = document.querySelector('.Actions--leftButtons--1M3KkF7')?document.querySelector('.Actions--leftButtons--1M3KkF7'):document.querySelector('#J_LinkBuy').parentNode;
-
                 let className = 'zhm_tab_tmall';
 
                 let shopNameCss = ['.ShopHeader--title--2qsBE1A'];
 
-                _this.getTitleShop(node,className,'.ItemHeader--mainTitle--3CIjqW5',shopNameCss)
+                let node = this.nodeDom;
+
+                let titleCss = document.querySelector('.ItemHeader--mainTitle--1rJcXZz')?'.ItemHeader--mainTitle--1rJcXZz':'.ItemHeader--mainTitle--3CIjqW5';
+
+                _this.getTitleShop(node,className,titleCss,shopNameCss)
 
             }
 
             tmallCaoshi(){
 
                 var _this = this;
-
-                //let node = document.querySelector('#J_LinkBuy').parentNode;
 
                 let node = document.querySelector('.Actions--leftButtons--1M3KkF7')?document.querySelector('.Actions--leftButtons--1M3KkF7'):document.querySelector('#J_LinkBuy').parentNode;
 
@@ -2404,29 +2397,194 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                 _this.getTitleShop(node,className,'.ItemHeader--mainTitle--3CIjqW5',shopNameCss);
 
-                //this.getCouponInfo(node,className);
             }
             jd(){
+
                 var _this = this;
-                setTimeout(()=>{
 
-                    //let jdGoodsId = couponUrl.match(/jd\.com\/(\S*).html/);
-                    let jdGoodsId = couponUrl.match(/jd\.(hk|com)\/(\S*).html/);
+                (async function(){
 
-                    let node= document.querySelector('#choose-btns');
+                    let couponDataInfo = GM_getValue('couponDataInfo',[]);
 
-                    node.before(this.divElement);
+                    console.log(couponDataInfo);
 
-                    this.request('get',`https://api.typechrome.com/index_jd_new.php?goods_id=${jdGoodsId[2]}`).then((result)=>{
+                    if(couponDataInfo.length>0){
 
-                        let resp= JSON.parse(result);
+                        let dataReally = [];
 
-                        let html='';
+                        for(let i =0; i < couponDataInfo.length; i++){
 
-                        resp.forEach(function(item,ikey){
+                            if(new Date().getTime()-couponDataInfo[i].addTime < 3600*1000){
 
-                            html +=
-                                `<a id='${_this.className.jdCouponLink}${ikey}' href="${item.coupon_link}" target='_blank' rel='noopener noreferrer nofollow'></a>
+                                dataReally.push(couponDataInfo[i]);
+
+                            }
+
+                        }
+
+                        GM_setValue('couponDataInfo',dataReally);
+
+                        couponDataInfo = dataReally;
+
+                    }
+
+                    let jdGoodsId = location.href.match(/jd\.(hk|com)\/(\S*).html/);
+
+                    let goodsId = jdGoodsId[2];
+
+                    let couponDataResult = {data:[],type:1};
+
+                    if(couponDataInfo.length>0){
+
+                        for(let i =0;i<couponDataInfo.length;i++){
+
+                            if(couponDataInfo[i].goodsId == goodsId ){
+
+                                couponDataResult.data.push(couponDataInfo[i]);
+
+                            }
+
+                        }
+
+                    }
+
+                    if(couponDataResult.data.length == 0){
+
+                        let apiUrl = `https://api.typechrome.com/index_jd_two.php?goods_id=${goodsId}`;
+
+                        let result = await _this.request('get',apiUrl);
+
+                        if(result){
+
+                            let jsonObj = JSON.parse(result);
+
+                            if(jsonObj[0]){
+
+                                couponDataResult.data = jsonObj;
+
+                                couponDataResult.type = 2;
+
+                            }else{
+                                console.log(jsonObj);
+                                return;
+                            }
+
+                        }else{
+                            console.log('服务端错误');
+                            return;
+                        }
+
+                    }
+
+                    console.log(couponDataResult);
+
+                    let couponData = couponDataInfo.length > 0? couponDataInfo:[];
+
+                    if(couponDataResult.type == 2){
+
+                        if(couponData.length==0){
+
+                            couponDataResult.data.forEach(function(item,ikey){
+                                item.goodsId = goodsId;
+                                item.addTime = new Date().getTime();
+                                couponData.push(item);
+
+                            })
+
+                        }else{
+
+                            for(let a=0;a<couponDataResult.data.length;a++){
+
+                                for(let i=0;i<couponData.length;i++){
+
+                                    if(couponDataResult.data[a].status == 1 && couponDataResult.data[a].goods_id == couponData[i].goods_id && couponDataResult.data[a].quota == couponData[i].quota && couponDataResult.data[a].discount == couponData[i].discount && couponDataResult.data[a].endTime == couponData[i].endTime){
+
+                                        continue;
+
+                                    }else if(couponDataResult.data[a].status > 1 && couponDataResult.data[a].goods_id == couponData[i].goods_id){
+
+                                        continue;
+
+                                    }else{
+                                        couponDataResult.data[a].goodsId = goodsId;
+                                        couponDataResult.data[a].addTime = new Date().getTime();
+                                        couponData.push(couponDataResult.data[a]);
+                                        break;
+                                    }
+
+                                }
+                            }
+
+                        }
+
+                        console.log(couponData);
+
+                        GM_setValue('couponDataInfo',couponData);
+                    }
+
+                    switch(couponDataResult.data[0].status){
+                        case 1:
+                            if(_this.nodeCss == '.qrcode'){
+
+                                let max = couponDataResult.data[0].discount;
+
+                                let index = 0;
+
+                                for(let i=0;i<couponDataResult.data.length;i++){
+
+                                    let cur = couponDataResult.data[i].discount;
+
+                                    cur > max ? index = i: null;
+
+
+                                }
+
+                                _this.jdQrcode(_this.nodeCss,couponDataResult.data[index].coupon_link);
+
+                                return;
+
+                            }
+                            break;
+                        case 2:
+
+                            console.log(_this.getQueryString('utm_source'));
+
+                            if(_this.nodeCss == '.qrcode'){
+
+                                _this.jdQrcode(_this.nodeCss,couponDataResult.data[0].coupon_link);
+
+                            }
+
+                            if(couponDataResult.data[0].isOpen && _this.nodeCss != '.qrcode' && couponDataResult.data[0].coupon_link && !_this.getQueryString('utm_source') && !_this.getQueryString('utm_medium')){
+
+                                location.href = 'https://api.typechrome.com/jd_link.php?link='+couponDataResult.data[0].coupon_link;
+
+                            }
+
+                            return;
+                            break;
+                        case 3:
+                            console.log('no coupon and link');
+                            return;
+                            break;
+
+
+                    }
+
+                    let divDom = document.createElement("div");
+
+                    divDom.id = _this.className.zhm_div_s;
+
+                    let node= document.querySelector(_this.nodeCss);
+
+                    node.before(divDom);
+
+                    let html='';
+
+                    couponDataResult.data.forEach(function(item,ikey){
+
+                        html +=
+                            `<a id='${_this.className.jdCouponLink}${ikey}' href="${item.coupon_link}" target='_blank' rel='noopener noreferrer nofollow'></a>
         <div class="${_this.className.zhm_coupon}" style="margin-left:10px;">
             <div class="${_this.className.zhm_left}">
                 <div class="${_this.className.zhm_img_icon}">
@@ -2451,28 +2609,29 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
             </div>
         </div>
         `
-                });
-                document.getElementById(_this.className.zhm_div_s).innerHTML = html;
+                    });
 
-                let couponWidth = document.querySelector('.'+_this.className.zhm_coupon).offsetWidth;
+                    document.getElementById(_this.className.zhm_div_s).innerHTML = html;
 
-                for(let i=0;i<resp.length;i++){
+                    let couponWidth = document.querySelector('.'+_this.className.zhm_coupon).offsetWidth;
 
-                     let jdCouponLinkDom = document.querySelector('#'+_this.className.jdCouponLink+i);
+                    for(let i=0;i<couponDataResult.data.length;i++){
 
-                    jdCouponLinkDom.style = `position:absolute;left:10px;z-index:${i+1};width:${couponWidth}px;height:80px;`;
+                        let jdCouponLinkDom = document.querySelector('#'+_this.className.jdCouponLink+i);
 
-                }
+                        jdCouponLinkDom.style = `position:absolute;left:10px;z-index:${i+1};width:${couponWidth}px;height:80px;`;
 
-                        let summaryQuan = document.querySelector('#summary-quan');
+                    }
 
-                        if(summaryQuan){
+                    let summaryQuan = document.querySelector('#summary-quan');
 
-                            summaryQuan.parentNode.removeChild(summaryQuan);
+                    if(summaryQuan){
 
-                        }
+                        summaryQuan.parentNode.removeChild(summaryQuan);
 
-                        let quanHtml = `
+                    }
+
+                    let quanHtml = `
 <div class="dt">优 惠 券</div>
 <div class="dd">
 <dl>
@@ -2480,32 +2639,31 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 <dd class="lh">
 <div class="J-open-tb" href="javascrit:void(0)" style="margin-top:-10px;">
 `;
-                        resp.forEach(function(item){
-                            quanHtml +=`
+                    couponDataResult.data.forEach(function(item){
+                        quanHtml +=`
 <span class="quan-item" style="margin-top:10px"><s></s><b></b>
 <span class="text"><a href="${item.coupon_link}" target='_blank' rel='noopener noreferrer nofollow' style='color:#df3033;'>满${item.quota}减${item.discount}</a></span>
  </span>
 `;
-                        })
-
-                        quanHtml += `</div></dd></dl></div>`;
-
-                        let divElement = document.createElement("div");
-
-                        divElement.id='summary-quan';
-
-                        divElement.className = 'li p-choose hide';
-
-                        divElement.setAttribute('clstag','shangpin|keycount|product|lingquan');
-
-                        divElement.innerHTML = quanHtml;
-
-                        let summaryInfo = document.querySelector('.summary-info');
-
-                        summaryInfo.after(divElement);
                     })
 
-                },couponWaitTime)
+                    quanHtml += `</div></dd></dl></div>`;
+
+                    let divElement = document.createElement("div");
+
+                    divElement.id='summary-quan';
+
+                    divElement.className = 'li p-choose hide';
+
+                    divElement.setAttribute('clstag','shangpin|keycount|product|lingquan');
+
+                    divElement.innerHTML = quanHtml;
+
+                    let summaryInfo = document.querySelector('.summary-info');
+
+                    summaryInfo.after(divElement);
+
+                })()
             }
 
             getCouponInfo(node,className,goodsTitle,shopName){
@@ -2572,29 +2730,21 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                             }
 
-
-                            //new QRCode(document.getElementById("tbqrcode"), resp.code_url);
-
-                            //新增领券样式
-
                             switch(_this.nowName){
                                 case 'tmall':
-                                    //getTmallCoupon(web.node);
                                     break;
                                 case 'tmallCaoshi':
-                                    //getTmallCaoshiCoupon(web.node);
                                     break;
                                 case 'taobao':
                                     _this.taobaoCouponStyle(resp.data);
                                     break;
                                 case 'jd':
-                                    //getJdCoupon(web.node);
                                     break;
 
                             }
 
                         }else{
-                            //console.log(resp.message);
+
                         }
 
                     })
@@ -2616,8 +2766,6 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
 
                     let goodsTitle = goodsTitleDom?(goodsTitleDom.getAttribute('data-title')?goodsTitleDom.getAttribute('data-title'):goodsTitleDom.innerText):'';
 
-                    //console.log(goodsTitle);
-
                     let shopNameDom = document.querySelector(shopNameCss[0])?document.querySelector(shopNameCss[0]):document.querySelector(shopNameCss[1]);
 
                     let shopName = shopNameDom?shopNameDom.innerText:'';
@@ -2638,7 +2786,7 @@ PM,https://www.playm3u8.cn/jiexi.php?url=
             }
             taobaoCouponStyle(resp){
 
-                let otherDiscount = document.querySelector('#J_OtherDiscount');//判断优惠区是否存在
+                let otherDiscount = document.querySelector('#J_OtherDiscount');
 
                 if(!otherDiscount)return;
 
@@ -2682,6 +2830,31 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                     }
 
                 }
+            }
+            jdQrcode(nodeCss,url){
+                var _this = this;
+                (async function(){
+
+                    let qrcodeDom = document.querySelector(nodeCss);
+
+                    qrcodeDom.id = _this.className.jdqrcode;
+
+                    let qrcodeImgDom = await BaseClass.getElement(nodeCss+' img');
+
+                    qrcodeImgDom.parentNode.removeChild(qrcodeImgDom);
+
+                    var qrcode = new QRCode(_this.className.jdqrcode, {
+                        width: 80,
+                        height: 80,
+                        colorDark : "#121212",
+                        colorLight : "#ffffff",
+                        correctLevel : QRCode.CorrectLevel.M
+                    });
+
+                    qrcode.makeCode(url);
+
+                })()
+
             }
 
         }
@@ -3004,8 +3177,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                                  zhmVideoItemDom.addEventListener('click',function(e){
 
-                                     //console.log(videoPlayUrl);
-
                                      let videoName = new Date().getTime()+'.mp4';
 
                                      BaseClass.LR_download(videoPlayUrl,videoName);
@@ -3222,8 +3393,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                 let timerCloseAuthor = setInterval(function(){
 
                     let commentDom = document.querySelector('.Comments-container')?document.querySelector('.Comments-container'):document.querySelector('.css-34podr');
-
-                    //let commentBox = document.querySelector('.css-34podr');
 
                     if(commentDom){
 
@@ -3448,8 +3617,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                    //获取所有视频
                    let videoDomAll = document.querySelectorAll('video');
 
-                   //console.log(videoDomAll);return;
-
                    if(videoDomAll.length==0)return;
 
                    //获取当前视频
@@ -3495,9 +3662,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                        videoId = videoContainer.getAttribute('data-xgplayerid')
                    }
 
-                   //console.log(videoId);
-                   //所有视频操作按钮区域
-
                    let playContainer = videoContainer.parentNode.parentNode.querySelector('.xg-right-grid');
 
                    if(!playContainer)return;
@@ -3537,13 +3701,13 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                        downloadDom.setAttribute('id','zhmDyDownload'+videoId);
 
-                      if(location.href.indexOf('search') == -1){
+                       if(location.href.indexOf('search') != -1 && location.href.indexOf('modal_id') == -1){
 
-                           downloadDom.style='margin-top:-68px;padding-top:100px;padding-left:20px;padding-right:20px;';
+                           downloadDom.style='margin-top:0px;padding-top:100px;';
 
                        }else{
 
-                           downloadDom.style='margin-top:0px;padding-top:100px;';
+                            downloadDom.style='margin-top:-68px;padding-top:100px;padding-left:20px;padding-right:20px;';
                        }
 
                        let downloadText = downloadDom.querySelector('.btn');
@@ -3573,22 +3737,19 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                        downloadDom.onmouseover=function(){
 
-                           //downloadDom.className='xgplayer-playclarity-setting';
+                           if(location.href.indexOf('search') != -1 && location.href.indexOf('modal_id') == -1){
 
-                           if(location.href.indexOf('search') == -1){
-
-                               virtualDom.style='display:block !important';
+                               virtualDom.style='display:block !important;margin-bottom:37px;';
 
                            }else{
 
-                               virtualDom.style='display:block !important;margin-bottom:37px;';
+                               virtualDom.style='display:block !important';
                            }
 
                        }
 
                        downloadDom.onmouseout=function(){
 
-                           //downloadDom.className='xgplayer-playclarity-setting disappear';
                            virtualDom.style='display:none !important';
                        }
 
@@ -3605,8 +3766,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                            downloadDom.querySelector('.virtual').innerHTML = downloadHtml;
 
                        }
-
-                       //playContainer.appendChild(downloadDom);
 
                        playClarityDom.after(downloadDom);
 
@@ -3634,7 +3793,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                        if(toDownloadDom){
 
                            toDownloadDom.addEventListener('click',function(){
-                               //console.log(url);return;
 
                                if(url.match(/^blob/)){
 
@@ -3679,8 +3837,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                    }
 
-                   //clearInterval(timer);
-
                },100)
 
             }
@@ -3716,8 +3872,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                         videoDom.addEventListener('ended',function(){ //结束
 
                             console.log("播放结束");
-
-                            //getControls();
 
                             let autoPlay = document.querySelector('.auto-warpper').getAttribute('autoplay');
 
@@ -3835,8 +3989,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                 let slider = xgIcon.querySelector('.pl-slider');
 
-                //slider.style = 'width:49px;padding:10px 5px 20px;';
-
                 let downloadList = '';
 
                 downloadOption.forEach(function(item){
@@ -3857,33 +4009,25 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                 xgIcon.onmouseover=function(){
 
-                    //downloadDom.className='xgplayer-playclarity-setting';
-
                     slider.style= 'margin-top:10px;width:49px;padding:10px 5px 20px;display:block !important';
 
                 }
 
                 xgIcon.onmouseout=function(){
 
-                    //downloadDom.className='xgplayer-playclarity-setting disappear';
                     slider.style='display:none !important';
                 }
                 return;
-                //重构播放操作按钮
 
                 let zhmKsButton = document.querySelector('#zhmKsButton');
 
-                //console.log(zhmKsButton);
-
                 if(zhmKsButton){
-
-                    //zhmKsButton.parentNode.removeChild(zhmKsButton);
 
                     return false;
                 }
 
                 let buttonIcon = detailDom.cloneNode(true);
-                //console.log(buttonIcon);
+
                 buttonIcon.setAttribute('id','zhmKsButton');
 
                 let buttonIconImg = buttonIcon.querySelector('.unmuted-icon');
@@ -4221,8 +4365,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                         }
 
-                        //_this.createBiliVideoDownload();
-
                         let timerZhmIcon = setInterval(function(){
 
                             let videoDom = [{name:'video',type:'dom'},{name:'bwp_video',type:'dom'},{name:'.bilibili-player-video',type:'class'}];
@@ -4428,8 +4570,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                                 let downloadUrl = data.data.durl[0].url;
 
-                                //GM_download(downloadUrl);
-
                                 window.open(downloadUrl);
 
                             })
@@ -4606,8 +4746,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                                 let downloadUrl = data.data.durl[0].url;
 
-                                //GM_download(downloadUrl);
-
                                 window.open(downloadUrl);
 
                             })
@@ -4712,8 +4850,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                         if(zhmlogo){
 
-                            //zhmlogo.parentNode.removeChild(zhmlogo);
-
                             zhmlogo.style.opacity=0;
                         }
 
@@ -4784,7 +4920,7 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                         },
                         onerror : function(err){
                             console.log(err);
-                            //reject(err);
+
                         }
                     });
 
@@ -4975,7 +5111,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                     window.open(_this.renewVersionUrl);
 
-                    //tipIconClose.click();
                 })
 
 
@@ -5010,7 +5145,7 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
             console.log('没有匹配该网站或该模块已关闭');return;
         }
-
+console.log(nowWeb);
         nowWeb.forEach(function(item){
 
             switch(item.funcName){
@@ -5051,13 +5186,24 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
         })
 
-        function couponFunc(item){
+        async function couponFunc(item){
+
+            let nodeDom = await BaseClass.getElement(item.node);
+
+            if(!nodeDom){
+                console.log(nodeDom);
+                return;
+            }
 
             var couponClass = new CouponClass();
 
+            couponClass.nodeDom = nodeDom;
+
             var {funcName,match:nowMatch,node:nowNode,name:nowName} = item;
 
-            couponClass.nowName=nowName;
+            couponClass.nowName = nowName;
+
+            couponClass.nodeCss = nowNode;
 
             var couponStyle =`
                     html{
@@ -5233,15 +5379,10 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                 if(lineObj){
 
-                    //playLine = [...lineObj,...playLine];
                     playLine = lineObj
 
                 }
             }
-
-            //custom add web line
-
-            //template:icon,playLine;
 
             let playWrapHtml = `<div class='${playVideoClass.className.zhm_play_video_line}'>`;
 
@@ -5275,8 +5416,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
             zhmPlay.appendChild(playLineDom);
 
-            //template:node;播放区域
-
             let playJxHtml = `<div class='${playVideoClass.className.zhm_play_video_jx}'>`;
 
             playJxHtml += "<iframe allowtransparency=true frameborder='0' scrolling='no' allowfullscreen=true allowtransparency=true name='jx_play' style='height:100%;width:100%' id='playIframe'></iframe></div>";
@@ -5293,9 +5432,8 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                 {funcName:"playVideo", node:"#player",match:/v\.youku\.com\/v_show\/id_/,areaClassName:'new-box-anthology-items'},
                 {funcName:"playVideo", node:"#player",match:/v\.youku\.com\/v_play\/id_/},
 
-                //{funcName:"playVideo", node:".player-container",nodeType:'id',match:/www\.bilibili\.com\/video/},
+
                 {funcName:"playVideo", node:"#bilibili-player",nodeType:'id',match:/www\.bilibili\.com\/video/,name:'biliPc',areaClassName:'video-episode-card'},
-                //{funcName:"playVideo", node:"#player_module",nodeType:'id',match:/www\.bilibili\.com\/bangumi/,areaClassName:'list-wrapper'},原来DOM
                 {funcName:"playVideo", node:".bpx-player-primary-area",nodeType:'id',match:/www\.bilibili\.com\/bangumi/,areaClassName:'eplist_ep_list_wrapper__PzLHa'},
                 {funcName:"playVideo", node:"#mgtv-player-wrap",nodeType:'id',match:/^https?:\/\/www.mgtv\.com\/b|l\/[0-9]/,areaClassName:'episode-items'},
 
@@ -5449,7 +5587,7 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                         //键盘快进快退暂停播放
                         document.onkeydown = function(event){
-                            //console.log(event.keyCode);
+
                             let video = document.querySelector('.video-layer video');
 
                             if(event.keyCode==39){
@@ -5511,6 +5649,16 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                                 panelTipVip.style.display='none';
 
                                 clearInterval(timer);
+                            }
+
+                            let panelTipVip2 = document.querySelector('.panel-tip-pay');
+
+                            if(panelTipVip2){
+
+                                panelTipVip2.style.display='none';
+
+                                clearInterval(timer);
+
                             }
 
                         }else{
@@ -5592,9 +5740,9 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                     }
 
                 }
-                //注释是多个播放选集区域
 
                 setTimeout(function(){
+
 
                     let videoSelect = document.querySelectorAll('.'+jxVideoWeb[0].areaClassName);
 
@@ -5603,8 +5751,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                     videoSelect.forEach(function(item){
 
                         item.addEventListener('click',function(e){
-
-                            //console.log(e.target.parentNode.href);
 
                             setTimeout(function(){
 
@@ -5630,9 +5776,10 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
             var playMusicClass = new PlayMusicClass();
 
+            console.log(playMusicClass.className);
+
             var musicId = Math.ceil(Math.random()*100000000);
 
-            //netease 路由两次，需重定义
             var newUrl = location.href;
 
             let jxMusicWeb = jxMusic[0].web.filter(function(item){
@@ -5837,9 +5984,7 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
 
                                                 document.querySelector('#batchDownload').addEventListener('click',function(){
 
-                                                    //BaseClass.toast('已下载，请稍候');
-
-                                                    let zhmCheckbox = soundList.querySelectorAll("input[name='zhmCheckbox']");
+                                                       let zhmCheckbox = soundList.querySelectorAll("input[name='zhmCheckbox']");
 
                                                     zhmCheckbox.forEach(function(item){
 
@@ -5877,8 +6022,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                                                                     padding: CryptoJS.pad.Pkcs7
 
                                                                 }).toString(CryptoJS.enc.Utf8);
-
-                                                                //console.log(decrypted);
 
                                                                 if(decrypted){
 
@@ -5987,7 +6130,7 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                                     item.removeAttribute('dataobj');
 
                                     item.setAttribute('target','_blank');
-                                    //console.log(dataObj);
+
                                 }
 
                             })
@@ -6198,8 +6341,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                     }
                 }
 
-                //clearInterval(timer);
-
             })
 
             function selectTaobao(e){
@@ -6225,8 +6366,6 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
                     item.parentNode.style='display:block';
 
                 });
-
-                //location.reload();
 
             }
 
@@ -6275,11 +6414,8 @@ ${resp.youhuiquan}元店铺优惠券，${resp.coupon_info}
     }
 
     (async function(){
-        //GM_deleteValue('info');return;
 
         let info = GM_getValue('info',0);
-
-        //console.log(info);
 
         let endDayT = info.endDayT?info.endDayT:0;
 
