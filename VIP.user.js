@@ -3,7 +3,7 @@
 // @namespace         http://tampermonkey.net/
 // @version           2.1.2
 // @description       全网VIP视频免费观看，支持：腾讯、爱奇艺、优酷、芒果、pptv、乐视等其它网站；支持PC端和移动端。
-// @icon              https://greasyfork.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQwODg1LCJwdXIiOiJibG9iX2lkIn19--d856065eb6f5fbceb294794ebb26fb5b8b24fdf0/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMjAwLDIwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--90c313fa493e6bdf6f08eda1aca280dec66feb0f/2cac330a48a3fe2f0aefb1cf9c2a1efe.jpeg?locale=zh-CN
+// @icon              https://github.com/Zheng8907/silver-waffle/blob/431f44dbd8e913a863f82d1820066c92232b2116/img/VIP.jpg
 // @author            创客云IT
 // @match             *://*.youku.com/*
 // @match             *://*.iqiyi.com/*
